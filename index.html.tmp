@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
-	<title>Wise Words - A typographic HTML template</title>
+	<title>Sandboxt news | ITを始め、未来を感じる様々な分野のニュースを斬る！</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -36,40 +36,112 @@
 	<div class="masthead clearfix">
 		<a href="index.html"><img id="logo" src="img/wwlogo@2x.png" alt="Wise Words"></a>
 	    <ul id="nav" class="nav ww-nav pull-right hidden-phone">
-	      <li class="active"><a href="blog.html">Blog</a></li>
-	      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Features</a>
-			<ul class="dropdown-menu">
-				<li><a href="typography.html">Typography</a></li>
-				<li><a href="elements.html">Elements</a></li>
-				<li><a href="icons.html">Icons</a></li>
-				<li><a href="404.html">404</a></li>
-				<li><a href="colors.html">Colors</a></li>
-			</ul>					
-	      </li>
-
-		  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Layouts</a>
-			<ul class="dropdown-menu">
-				<li><a href="layout-left.html">Left Column</a></li>
-				<li><a href="blog-single.html">Right Column</a></li>
-				<li><a href="layout-full.html">Full Width</a></li>
-				<li><a href="index.html">Centered Content</a></li>
-			</ul>					
-	      </li>
-	      <li><a href="contact.html">Contact</a></li>
-	    </ul>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
 	</div>
 
 	<hr>
-	
+
 	<div class="row main-content">
+		<div class="offset1 span6 zone-content">
 
-		<div class="offset3 span6 zone-content">
-			<h1 class="notfound-title">404</h1>
+			<ul class="blog-posts">
+				<li class="first">
+					<article class="blog-post">
+						<div class="published">May 20, 2016</div>
+						<h1><a href="blog-single.html">IoTの通信規格ってどうなってんの？</a></h1>
+						<p>&nbsp;… <a href="blog-single.html">more</a></p>
 
-			<p class="notfound-message">
-			    The resource was not found.
-			</p>
+						<p class="tags">
+		    				<span>Tags:</span>
+								<a href="#">Lorem</a>, <a href="#">Ipsum</a>, <a href="#">Linux</a>, <a href="#">Mac</a>, <a href="#">Wordpress</a>, <a href="#">Joomla</a>
+						</p>
+					</article>
+				</li>
+			</ul>
+
+			<div class="blog-pagination">
+
+				<!--
+	 			<div class="newer">
+					<a href="#">« Newer posts</a>
+				</div> -->
+
+				<div class="older">
+					<a href="#">Older posts »</a>
+				</div>
+			</div>
+
 		</div>
+
+		<aside id="aside-right" class="aside-column offset1 span3">
+			<article class="widget-search-form widget">
+				<header>
+		    		<h1>Search</h1>
+			    </header>
+				<form action="#" class="search-form" method="get">
+					<fieldset>
+				        <input id="q" name="q" type="text" value="">
+				        <!-- <button type="submit" class="button-icon"><i class="glyphicons-icon search white"></i></button> -->
+				        <button type="submit">Go</button>
+				    </fieldset>
+				</form>
+			</article>
+
+			<article class="widget-tag-cloud widget">
+			    <header>
+			        <h1>Tag Cloud</h1>
+			    </header>
+			    <ul class="tagcloud">
+			    <li class="tagCloud-tag tagCloud-1">
+			        <a href="#">London</a>
+			    </li>
+			    <li class="tagCloud-tag tagCloud-5">
+			        <a href="#">Edinburgh</a>
+			    </li>
+			    <li class="tagCloud-tag tagCloud-3">
+			        <a href="#">Hamburg</a>
+			    </li>
+			    <li class="tagCloud-tag tagCloud-4">
+			        <a href="#">Krakow</a>
+			    </li>
+			    <li class="tagCloud-tag tagCloud-2">
+			        <a href="#">Fortaleza</a>
+			    </li>
+			    <li class="tagCloud-tag tagCloud-1">
+			        <a href="#">Winterthur</a>
+			    </li>
+			    <li class="tagCloud-tag tagCloud-2">
+			        <a href="#">St.Gallen</a>
+			    </li>
+			    <li class="tagCloud-tag tagCloud-1">
+			        <a href="#">Jakarta</a>
+			    </li>
+			    <li class="tagCloud-tag tagCloud-5">
+			        <a href="#">Bangkok</a>
+			    </li>
+			    <li class="tagCloud-tag tagCloud-3">
+			        <a href="#">Belgrad</a>
+			    </li>
+			    <li class="tagCloud-tag tagCloud-4">
+			        <a href="#">Vienna</a>
+			    </li>
+			    <li class="tagCloud-tag tagCloud-4">
+			        <a href="#">Marrakech</a>
+			    </li>
+			    <li class="tagCloud-tag tagCloud-2">
+			        <a href="#">Miami</a>
+			    </li>
+				</ul>
+			</article>
+
+			<article class="widget-triple-first widget-html-widget widget">
+				<header>
+		    		<h1>Random</h1>
+				</header>
+			    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nibh ut tortor dapibus vestibulum. Aliquam vel sem nibh. Suspendisse vel condimentum tellus.</p>
+			</article>
+		</aside>
 	</div>
 
 	<hr>
@@ -114,11 +186,11 @@
 			</div>
 		</div>
 	</div>
-	
+
     <hr>
 	<div class="row">
 
-		<div class="copyright span12">Copyright 2013 - Made in Switzerland</div>	
+		<div class="copyright span12">Copyright 2013 - Made in Switzerland</div>
 	</div>
 
 </div>  <!-- End Container -->

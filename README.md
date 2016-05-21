@@ -1,2 +1,3 @@
 # sandbox_news
-This is a repository for Sandbox News back numbers.
+gem install filewatcher
+filewatcher index.haml "haml index.haml > index.html"
