@@ -1,163 +1,74 @@
 !!!
-/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
-/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
-/[if IE 8] <html class="no-js lt-ie9">
-/ [if gt IE 8]><!
-%html.no-js{:lang => "en"}
-  / <![endif]
+/
+  Future Imperfect by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+%html
   %head
-    %meta{:charset => "UTF-8"}/
     %title Sandboxt news | ITを始め、未来を感じる様々な分野のニュースを斬る！
-    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    / Google Fonts
-    %link{:href => "http://fonts.googleapis.com/css?family=Poiret+One|PT+Serif|Open+Sans:400,300", :rel => "stylesheet", :type => "text/css"}/
-    / Stylesheets
-    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
-    %link{:href => "css/bootstrap-responsive.min.css", :rel => "stylesheet"}/
-    %link{:href => "css/socialicons.css", :rel => "stylesheet"}/
-    %link{:href => "css/glyphicons.css", :rel => "stylesheet"}/
-    %link{:href => "css/halflings.css", :rel => "stylesheet"}/
-    %link{:href => "css/template.css", :rel => "stylesheet"}/
-    %link#colorcss{:href => "css/colors/color-classic.css", :rel => "stylesheet"}/
-    / Modernizr for Glyphicons (SVG)
-    %script{:src => "js/modernizr.js"}
-    / HTML5 shim, for IE6-8 support of HTML5 elements
-    /[if lt IE 9]
-      <script src="js/html5shiv.js"></script>
-    :scss
-      body {
-        -webkit-font-smoothing: antialiased;
-        font: 1.6em/1.5 "adelle", Georgia, "Times New Roman", serif;
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    /[if lte IE 8] <script src="assets/js/ie/html5shiv.js"></script>
+    %link{:href => "assets/css/main.css", :rel => "stylesheet"}/
+    /[if lte IE 9] <link rel="stylesheet" href="assets/css/ie9.css" />
+    /[if lte IE 8] <link rel="stylesheet" href="assets/css/ie8.css" />
+  %body
+    / Wrapper
+    #wrapper
+      #main
+        %article.post
+          %header
+            .title
+              %h2
+                %a{:href => "#"} Episode 1: Internet of Everything
+              %p Internet of Everything
+            .meta
+              %time.published{:datetime => "2015-11-01"} May 20, 2016
+              %a.author{:href => "#"}
+                %span.name Kazuki Tanaka
+                %img{:alt => "", :src => "images/avatar.jpg"}/
+              %a.author{:href => "#"}
+                %span.name Shun Iwase
+                %img{:alt => "", :src => "images/avatar.jpg"}/
 
-        .episode-title {
-          color: #f03737;
-          font-weight: bold;
-          font-size: 0.8em;
-          text-transform: none;
-        }
-      }
-  %body{ style: "background-color: #fff;" }
-    .container
-      .masthead.clearfix
-        %a{:href => "index.html"}
-          %img#logo{:alt => "Wise Words", :src => "img/wwlogo@2x.png"}/
-        %ul#nav.nav.ww-nav.pull-right.hidden-phone
-          %li
-            %a{:href => "contact.html"} Contact
-      %hr/
-      .row.main-content
-        .offset3.span6.zone-content
-          %ul.blog-posts
-            %li.first
-              %article.blog-post
-                -# .published May 20, 2016
-                %h1{ style: "text-align: left; margin-bottom: 20px;" }
-                  %a.episode-title{:href => "#"} Episode 1: Internet of Everything
+          %a.image.featured{:href => "#"}
+            <iframe width="100%" height="180" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/279522967&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+          %p 発表盛りだくさんであった昨晩のGoogle I/O...
+      %section#sidebar
+        / Intro
+        %section#intro
+          %a.logo{:href => "#"}
+            %img{:alt => "", :src => "images/logo.jpg"}/
+          %header
+            %h2 Sandbox news
+            %p
+              Powered by
+              %a{:href => "http://aisaac.in/", style: "text-transform: none;"} aisaac, inc.
+        / Mini Posts
 
-                %p
-                  <iframe width="100%" height="180" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/279522967&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-                -# %p.tags
-                -#   %span Tags:
-                -#   = succeed "," do
-                -#     %a{:href => "#"} Lorem
-                -#   = succeed "," do
-                -#     %a{:href => "#"} Ipsum
-                -#   = succeed "," do
-                -#     %a{:href => "#"} Linux
-                -#   = succeed "," do
-                -#     %a{:href => "#"} Mac
-                -#   = succeed "," do
-                -#     %a{:href => "#"} Wordpress
-                -#   %a{:href => "#"} Joomla
-          -# .blog-pagination
-          -#   /
-          -#     <div class="newer">
-          -#     <a href="#">« Newer posts</a>
-          -#     </div>
-          -#   .older
-          -#     %a{:href => "#"} Older posts »
-        -# %aside#aside-right.aside-column.offset1.span3
-        -#   %article.widget-search-form.widget
-        -#     %header
-        -#       %h1 Search
-        -#     %form.search-form{:action => "#", :method => "get"}
-        -#       %fieldset
-        -#         %input#q{:name => "q", :type => "text", :value => ""}/
-        -#         / <button type="submit" class="button-icon"><i class="glyphicons-icon search white"></i></button>
-        -#         %button{:type => "submit"} Go
-        -#   %article.widget-tag-cloud.widget
-        -#     %header
-        -#       %h1 Tag Cloud
-        -#     %ul.tagcloud
-        -#       %li.tagCloud-tag.tagCloud-1
-        -#         %a{:href => "#"} London
-        -#       %li.tagCloud-tag.tagCloud-5
-        -#         %a{:href => "#"} Edinburgh
-        -#       %li.tagCloud-tag.tagCloud-3
-        -#         %a{:href => "#"} Hamburg
-        -#       %li.tagCloud-tag.tagCloud-4
-        -#         %a{:href => "#"} Krakow
-        -#       %li.tagCloud-tag.tagCloud-2
-        -#         %a{:href => "#"} Fortaleza
-        -#       %li.tagCloud-tag.tagCloud-1
-        -#         %a{:href => "#"} Winterthur
-        -#       %li.tagCloud-tag.tagCloud-2
-        -#         %a{:href => "#"} St.Gallen
-        -#       %li.tagCloud-tag.tagCloud-1
-        -#         %a{:href => "#"} Jakarta
-        -#       %li.tagCloud-tag.tagCloud-5
-        -#         %a{:href => "#"} Bangkok
-        -#       %li.tagCloud-tag.tagCloud-3
-        -#         %a{:href => "#"} Belgrad
-        -#       %li.tagCloud-tag.tagCloud-4
-        -#         %a{:href => "#"} Vienna
-        -#       %li.tagCloud-tag.tagCloud-4
-        -#         %a{:href => "#"} Marrakech
-        -#       %li.tagCloud-tag.tagCloud-2
-        -#         %a{:href => "#"} Miami
-        -#   %article.widget-triple-first.widget-html-widget.widget
-        -#     %header
-        -#       %h1 Random
-        -#     %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nibh ut tortor dapibus vestibulum. Aliquam vel sem nibh. Suspendisse vel condimentum tellus.
-      -# %hr/
-      -# .row.triple-row
-      -#   #triple-first.span4.triple
-      -#     .zone.zone-triple-first
-      -#       %article.widget-triple-first.widget-html-widget.widget
-      -#         %header
-      -#           %h1 First Triple
-      -#         %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nibh ut tortor dapibus vestibulum. Aliquam vel sem nibh. Suspendisse vel condimentum tellus.
-      -#   #triple-second.span4.triple
-      -#     .zone.zone-triple-second
-      -#       %article.widget-triple-second.widget-html-widget.widget
-      -#         %header
-      -#           %h1 Second Triple
-      -#         %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nibh ut tortor dapibus vestibulum. Aliquam vel sem nibh. Suspendisse vel condimentum tellus.
-      -#   #triple-third.span4.triple
-      -#     .zone.zone-triple-third
-      -#       %article.widget-triple-third.widget-html-widget.widget
-      -#         %header
-      -#           %h1 Share & Connect
-      -#         %p
-      -#           %a{:href => "#"}
-      -#             %i.smicon-rss
-      -#           %a{:href => "#"}
-      -#             %i.smicon-twitter
-      -#           %a{:href => "#"}
-      -#             %i.smicon-google
-      -#           %a{:href => "#"}
-      -#             %i.smicon-github
-      -#           %a{:href => "#"}
-      -#             %i.smicon-reddit
-      %hr/
-      .row
-        .copyright.span12 © 2016 aisaac, inc.
-    / End Container
-    /
-      Javascript
-      \==================================================
-    / Placed at the end of the document so the pages load faster
-    %script{:src => "js/jquery-1.9.1.js"}
-    %script{:src => "js/bootstrap.js"}
-    %script{:src => "js/tinynav.js"}
-    %script{:src => "js/template.js"}
+        %section#footer
+          %ul.icons
+            %li
+              %a.fa-twitter{:href => "#"}
+                %span.label Twitter
+            %li
+              %a.fa-facebook{:href => "#"}
+                %span.label Facebook
+            %li
+              %a.fa-instagram{:href => "#"}
+                %span.label Instagram
+            %li
+              %a.fa-rss{:href => "#"}
+                %span.label RSS
+            %li
+              %a.fa-envelope{:href => "#"}
+                %span.label Email
+          %p.copyright
+            © 2016 aisaac, inc.
+    / Scripts
+    %script{:src => "assets/js/jquery.min.js"}
+    %script{:src => "assets/js/skel.min.js"}
+    %script{:src => "assets/js/util.js"}
+    /[if lte IE 8] <script src="assets/js/ie/respond.min.js"></script>
+
+    %script{:src => "assets/js/main.js"}
