@@ -3,6 +3,16 @@
   Future Imperfect by HTML5 UP
   html5up.net | @ajlkn
   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+:scss
+  .page-loader {
+    position: fixed;
+    background: #fff;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 9998;
+  }
 %html
   %head
     %title Sandboxt news | ITを始め、未来を感じる様々な分野のニュースを斬る！
@@ -13,6 +23,7 @@
     /[if lte IE 9] <link rel="stylesheet" href="assets/css/ie9.css" />
     /[if lte IE 8] <link rel="stylesheet" href="assets/css/ie8.css" />
   %body
+    <div class="page-loader" style=""><div class="loader" style="display: none;">Loading</div></div>
     / Wrapper
     #wrapper
       #main
@@ -26,10 +37,10 @@
               %time.published{:datetime => "2015-11-01"} May 20, 2016
               %a.author{ href: "https://twitter.com/gogo_tanaka", target: "_blank" }
                 %span.name Kazuki Tanaka
-                %img{:alt => "", :src => "https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/10150764_621831094569468_2252272148271425021_n.jpg?oh=f988eae44dcd12f29fb2943881547f04&oe=583F0A2C"}/
+                %img{:alt => "", :src => "images/authors/gogotanaka.jpg"}/
               %a.author{ href: "https://twitter.com/_sh_8_", target: "_blank" }
                 %span.name Shun Iwase
-                %img{:alt => "", :src => "https://pbs.twimg.com/profile_images/753766412867428352/QXnFBc9f.jpg"}/
+                %img{:alt => "", :src => "images/authors/_sh_8_.jpg"}/
 
           %a.image.featured{:href => "#"}
             <iframe width="100%" height="180" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/279522967&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
@@ -72,3 +83,7 @@
     /[if lte IE 8] <script src="assets/js/ie/respond.min.js"></script>
 
     %script{:src => "assets/js/main.js"}
+    :javascript
+      $(window).load(function() {
+        $('.page-loader').delay(100).fadeOut('slow');
+      });

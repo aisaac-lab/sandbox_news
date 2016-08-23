@@ -4,6 +4,16 @@
   html5up.net | @ajlkn
   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<style>
+  .page-loader {
+    position: fixed;
+    background: #fff;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 9998; }
+</style>
 <html>
   <head>
     <title>Sandboxt news | ITを始め、未来を感じる様々な分野のニュースを斬る！</title>
@@ -15,6 +25,7 @@
     <!--[if lte IE 8]> <link rel="stylesheet" href="assets/css/ie8.css" /> <![endif]-->
   </head>
   <body>
+    <div class="page-loader" style=""><div class="loader" style="display: none;">Loading</div></div>
     <!-- Wrapper -->
     <div id='wrapper'>
       <div id='main'>
@@ -30,11 +41,11 @@
               <time class='published' datetime='2015-11-01'>May 20, 2016</time>
               <a class='author' href='https://twitter.com/gogo_tanaka' target='_blank'>
                 <span class='name'>Kazuki Tanaka</span>
-                <img alt='' src='https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/10150764_621831094569468_2252272148271425021_n.jpg?oh=f988eae44dcd12f29fb2943881547f04&amp;oe=583F0A2C'>
+                <img alt='' src='images/authors/gogotanaka.jpg'>
               </a>
               <a class='author' href='https://twitter.com/_sh_8_' target='_blank'>
                 <span class='name'>Shun Iwase</span>
-                <img alt='' src='https://pbs.twimg.com/profile_images/753766412867428352/QXnFBc9f.jpg'>
+                <img alt='' src='images/authors/_sh_8_.jpg'>
               </a>
             </div>
           </header>
@@ -99,5 +110,10 @@
     <script src='assets/js/util.js'></script>
     <!--[if lte IE 8]> <script src="assets/js/ie/respond.min.js"></script> <![endif]-->
     <script src='assets/js/main.js'></script>
+    <script>
+      $(window).load(function() {
+        $('.page-loader').delay(100).fadeOut('slow');
+      });
+    </script>
   </body>
 </html>
